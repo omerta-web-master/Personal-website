@@ -1,0 +1,678 @@
+@use "abstract/index" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+#canvas1 {
+	background-color: black;
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+body {
+	min-height: 200vh;
+	font-family: $primary-font;
+	color: white;
+}
+
+// MOBILE NAV
+.mobile_nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(0px, -100%);
+	width: 100%;
+	padding: 3rem 0px;
+	text-align: center;
+	background-color: black;
+	z-index: 22;
+	transition: all 0.2s ease;
+	box-shadow: 0px 2px 2px rgba(255, 255, 255, 1);
+
+	a {
+		text-transform: uppercase;
+		color: white;
+		padding: 0.3rem;
+		display: inline-block;
+	}
+
+	&.active {
+		transform: translate(0px, -100%);
+
+		@include sm {
+			transform: translate(0px, 0px);
+		}
+	}
+
+	.social_media {
+		margin-top: 0.5rem;
+		margin-right: 0 !important;
+
+		@include sm {
+			display: block !important;
+		}
+
+		a {
+			color: white;
+		}
+	}
+}
+
+/* HEADER */
+.main_header {
+	background-color: rgb(1, 1, 15);
+	position: sticky;
+	top: 0;
+	padding: 1rem 0px;
+	color: var(--text-white);
+	box-shadow: 0 2px 1px rgba(255, 255, 255, 0.7);
+	z-index: 20;
+	display: flex;
+
+	@include sm {
+		box-shadow: none;
+	}
+
+	.contact {
+		display: flex;
+		flex-direction: column;
+		margin-left: 1rem;
+		@include md {
+			display: none;
+		}
+
+		.flex {
+			gap: 0.3rem;
+			align-items: center;
+		}
+
+		span {
+			font-weight: 300;
+			letter-spacing: 0.1rem;
+			font-size: 1.3rem;
+		}
+	}
+
+	.main_nav {
+		@include sm {
+			display: none;
+		}
+		ul {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		li {
+		}
+
+		a {
+			padding: 0.5rem 1rem;
+			color: white;
+			font-size: 1.3rem;
+			font-weight: 300;
+		}
+	}
+
+	.social_media {
+		justify-self: right;
+		margin-right: 2rem;
+
+		@include sm {
+			display: none;
+		}
+	}
+
+	.mobile_nav_toggler {
+		background-color: transparent;
+		position: relative;
+		border: none;
+		outline: none;
+		color: white;
+		display: none;
+		margin-right: 1rem;
+		transition: all 0.3s ease;
+		z-index: 100;
+
+		@include sm {
+			display: block;
+		}
+
+		&:hover {
+			opacity: 0.8;
+			transform: scale(1.1);
+		}
+	}
+}
+
+// SOCIAL MEDIA ICONS
+.social_media {
+	display: flex;
+
+	i {
+		font-size: 1.5rem;
+		padding: 0.3rem 0.6rem;
+		border-left: 1px solid white;
+		color: white;
+
+		&:last-child {
+			border-right: 1px solid white;
+		}
+	}
+}
+
+/* SHOWCASE */
+.showcase {
+	display: flex;
+	width: 100%;
+	min-height: 95vh;
+	align-items: flex-start;
+	justify-content: center;
+	color: white;
+	overflow: hidden;
+}
+
+.showcase_content {
+	width: 100%;
+	max-width: 1500px;
+	margin-top: 6rem;
+	padding: 0px 1rem;
+	.showcase_text {
+		margin-bottom: 6rem;
+		margin-left: 3rem;
+		@include sm {
+			margin-left: 0px;
+		}
+
+		.showcase_title {
+			font-size: 4rem;
+			@include sm {
+				font-size: 3rem;
+			}
+		}
+
+		.showcase_subtitle {
+			font-weight: 300;
+			font-size: 1.4rem;
+			max-width: 500px;
+			@include sm {
+				max-width: none;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+#check_my_projects_btn {
+	padding: 0.7rem 2rem;
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+	text-transform: uppercase;
+	margin-top: 1rem;
+	background-color: #b87107;
+	color: white;
+	transition: all 0.3s ease;
+	font-family: "Poppins", sans-serif;
+
+	&:hover {
+		transform: scale(1.1);
+		opacity: 0.75;
+	}
+}
+
+.showcase_images {
+	margin: auto;
+	position: relative;
+	transform: translate(13%, 0px);
+
+	@include xl {
+		transform: translate(10%, 0px);
+	}
+	@include md {
+		transform: translate(5%, 0px);
+	}
+
+	@include sm {
+		transform: translate(0%, 0px);
+	}
+}
+
+.showcase_img_container {
+	position: absolute;
+	max-width: 500px;
+	transition: all 0.3s ease;
+
+	@include xl {
+		max-width: 400px;
+	}
+	@include md {
+		max-width: 300px;
+	}
+
+	&:hover {
+		.img_overlay {
+			opacity: 1;
+		}
+	}
+
+	.img_overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: opacity 0.3s ease;
+		opacity: 0;
+
+		& > div {
+			color: black;
+
+			h3 {
+				padding: 0.3rem 0.5rem;
+				background-color: rgba(255, 255, 255, 0.7);
+				font-weight: 300;
+			}
+
+			a {
+				background-color: white;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: none;
+				outline: none;
+				margin: auto;
+				margin-top: 0.3rem;
+				transition: all 0.3s ease;
+
+				&:hover {
+					opacity: 0.8;
+					transform: scale(1.05);
+				}
+
+				i {
+					font-size: 2rem;
+					color: rgb(44, 44, 53);
+				}
+			}
+		}
+	}
+}
+
+.showcase_images > div:nth-child(1) {
+	z-index: 1;
+
+	@include sm {
+		display: none;
+	}
+
+	&:hover {
+		transform: translate(0px, 15%) scale(1.3);
+		z-index: 10;
+	}
+}
+
+.showcase_images > div:nth-child(2) {
+	transform: translate(30%, -20%);
+	z-index: 2;
+
+	@include sm {
+		display: none;
+	}
+
+	&:hover {
+		transform: translate(30%, -5%) scale(1.3);
+		z-index: 10;
+	}
+}
+
+.showcase_images > div:nth-child(3) {
+	transform: translate(60%, -40%);
+	z-index: 3;
+
+	@include sm {
+		transform: translate(0px, 0px);
+	}
+
+	&:hover {
+		transform: translate(60%, -25%) scale(1.3);
+		z-index: 10;
+
+		@include sm {
+			transform: translate(0px, 15%) scale(1.3);
+			z-index: 10;
+		}
+	}
+}
+
+.showcase_images > div:nth-child(4) {
+	transform: translate(90%, -60%);
+	z-index: 4;
+	@include sm {
+		transform: translate(30%, -20%);
+		z-index: 4;
+	}
+
+	&:hover {
+		transform: translate(90%, -45%) scale(1.3);
+		z-index: 10;
+		@include sm {
+			transform: translate(30%, -5%) scale(1.3);
+			z-index: 10;
+		}
+	}
+}
+
+.showcase_images > div:nth-child(5) {
+	transform: translate(120%, -80%);
+	z-index: 5;
+	@include sm {
+		transform: translate(60%, -40%);
+		z-index: 5;
+	}
+
+	&:hover {
+		transform: translate(120%, -65%) scale(1.3);
+		@include sm {
+			transform: translate(60%, -25%) scale(1.3);
+			z-index: 10;
+		}
+	}
+}
+
+// SECTION TITLE
+.section_title {
+	display: flex;
+	gap: 0.5rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 6rem;
+	text-transform: uppercase;
+	@include sm {
+		margin: 5rem 0px;
+	}
+
+	h1 {
+		font-size: 4rem;
+		font-weight: bold;
+
+		@include sm {
+			font-size: 2rem;
+		}
+	}
+
+	.line {
+		height: 1px;
+		width: 400px;
+		background-color: white;
+		@include sm {
+			width: 200px;
+		}
+	}
+}
+
+// PROJECTS SECTION
+.project_section {
+	.project_info {
+		flex: 1;
+	}
+
+	.project_photos {
+		flex: 1;
+
+		.all_photos {
+			display: flex;
+			margin-top: 1rem;
+			gap: 1rem;
+			width: 100%;
+			transition: transform 0.3s ease;
+
+			& > div {
+				transition: transform 0.3s ease;
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+	.projects {
+		& > div:nth-child(2n + 1) {
+			background-color: rgba(255, 255, 255, 0.9);
+			color: black;
+
+			i {
+				color: blue;
+			}
+
+			a {
+				color: rgb(25, 49, 129);
+			}
+		}
+		& > div:nth-child(2n) {
+			background-color: rgba(3, 1, 19, 0.8);
+			color: white;
+		}
+	}
+
+	.divider {
+		width: 100%;
+		height: 1px;
+		margin: 2rem 0px;
+		background-color: rgb(85, 140, 243);
+	}
+
+	.project {
+		gap: 1rem;
+		padding: 3rem 0px;
+		margin-bottom: 2rem;
+
+		.flex {
+			gap: 1rem;
+
+			@include md {
+				flex-direction: column;
+			}
+		}
+
+		.project_title {
+			text-align: center;
+			font-weight: bold;
+			padding: 0.5rem;
+			font-family: $secondary-font;
+		}
+
+		.project_link {
+			display: block;
+			font-size: 1.3rem;
+			color: rgb(49, 195, 240);
+			padding: 0.1rem 0px;
+		}
+
+		.languages {
+			display: flex;
+			gap: 0.5rem;
+			i {
+				font-size: 2rem;
+				color: rgb(104, 190, 247);
+			}
+		}
+
+		.features_list {
+			list-style: disc;
+			margin-left: 1.5rem;
+
+			li {
+				font-weight: 300;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+// RESUME SECTION
+.resume_section {
+	.resume {
+		max-width: 1200px;
+		margin: auto;
+		padding: 5rem;
+		background-color: white;
+		color: rgb(41, 38, 38);
+		border-radius: 5px;
+
+		@include sm {
+			padding: 0.8rem;
+		}
+
+		.header_section {
+			text-align: center;
+			.name {
+				font-weight: 600;
+				margin-bottom: 1rem;
+				letter-spacing: 10px;
+			}
+
+			.job_position {
+				font-weight: 300;
+			}
+		}
+	}
+
+	.contact_section {
+		padding: 4rem;
+		justify-content: space-evenly;
+		gap: 1rem;
+		display: flex;
+
+		@include sm {
+			padding: 4rem 0.5rem;
+		}
+
+		@include md {
+			flex-direction: column;
+		}
+		.flex {
+			align-items: center;
+			gap: 0.8rem;
+
+			span {
+				font-size: 1.3rem;
+				color: rgb(92, 88, 88);
+				letter-spacing: 0.3rem;
+				@include sm {
+					letter-spacing: 0;
+					font-size: 0.7;
+				}
+			}
+
+			i {
+				color: gray;
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	.resume_section_title {
+		color: rgb(41, 38, 38);
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		padding: 0.3rem 2rem;
+		display: inline-block;
+		letter-spacing: 7px;
+		font-weight: 400;
+		margin-bottom: 1.4rem;
+		background-color: rgb(175, 248, 224);
+	}
+
+	.about_me {
+		p {
+			font-weight: 300;
+			font-size: 1.3rem;
+			text-indent: 2rem;
+		}
+	}
+
+	.educationAndSkills {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		@include lg {
+			flex-direction: column;
+		}
+
+		.education {
+			.years {
+				text-align: center;
+				font-weight: 300;
+				margin-bottom: 0.3rem;
+			}
+			h3 {
+				font-weight: 500;
+				font-size: 1.2rem;
+			}
+		}
+
+		.competencies {
+			h3 {
+				font-weight: 500;
+				margin-bottom: 0.3rem;
+			}
+
+			ul {
+				list-style-type: disc;
+				margin-left: 2rem;
+			}
+		}
+
+		.skills {
+			ul {
+				list-style-type: disc;
+				display: flex;
+				flex-direction: column;
+				gap: 0.3rem;
+				margin-left: 2rem;
+			}
+		}
+	}
+
+	.resume_projects {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+
+		@include md {
+			grid-template-columns: 1fr;
+		}
+
+		.resume_project {
+			h3 {
+				font-weight: 500;
+				font-style: italic;
+			}
+			p {
+				text-indent: 1rem;
+			}
+		}
+	}
+}
+
+// FOOTER
+.footer {
+	width: 100%;
+	background-color: rgb(23, 4, 44);
+	padding: 2rem 0px;
+	text-align: center;
+
+	.social_media {
+		justify-content: center;
+		margin-bottom: 1rem;
+	}
+}

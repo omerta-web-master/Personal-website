@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio</title>
+
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" href="css/abstract/myCssLibrary.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<canvas id="canvas1"></canvas>
+
+		<!-- HEADER -->
+		<div class="main_header">
+			<div class="contact">
+				<div class="flex">
+					<i class="fas fa-mobile-alt"></i>
+					<span>+40754331725</span>
+				</div>
+				<div class="flex">
+					<i class="fas fa-envelope-open"></i>
+					<span>dumitrumerlusca@gmail.com</span>
+				</div>
+			</div>
+			<div class="container">
+				<nav class="main_nav">
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#projects">Projects</a></li>
+					</ul>
+				</nav>
+			</div>
+			<button class="mobile_nav_toggler" data-mobile_nav_toggler>
+				<i class="fas fa-bars fa-3x"></i>
+			</button>
+			<div class="social_media">
+				<a href="https://github.com/omerta-web-master"><i class="fab fa-github"></i></a>
+				<a href="https://www.facebook.com/dumitru.merlusca"><i class="fab fa-facebook"></i></a>
+				<a href="https://www.linkedin.com/in/dumitru-merlusca-2a06a7215/"><i class="fab fa-linkedin"></i></a>
+			</div>
+
+			<!-- Mobile nav -->
+			<nav class="mobile_nav" data-mobile_nav>
+				<ul>
+					<ul>
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#resume">Resume</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li>
+								<div class="social_media">
+									<a href="https://github.com/omerta-web-master"><i class="fab fa-github"></i></a>
+									<a href="https://www.facebook.com/dumitru.merlusca"><i class="fab fa-facebook"></i></a>
+									<a href="https://www.linkedin.com/in/dumitru-merlusca-2a06a7215/"><i class="fab fa-linkedin"></i></a>
+								</div>
+							</li>
+						</ul>
+					</ul>
+				</ul>
+
+			</nav>
+		</div>
+
+
+		<!-- SHOWCASE -->
+		<div id="home" class="showcase">
+			<div class="showcase_content">
+				<div class="showcase_text">
+					<h1 class="showcase_title">Hi! I am developer</h1>
+					<p class="showcase_subtitle">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
+						quis!
+					</p>
+					<button id="check_my_projects_btn">
+						Check my projects
+						<i class="fas fa-hand-point-right fa-2x"></i>
+					</button>
+				</div>
+				<div class="showcase_images">
+					<div class="showcase_img_container">
+						<img src="./images/pasolinoLaptopMockup.png" alt="" />
+						<div class="img_overlay">
+							<div>
+								<h3>Landing page</h3>
+								<a href="#pasolino" class=""><i class="fas fa-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="showcase_img_container">
+						<img src="./images/barberyaLaptopMockup.png" alt="" />
+						<div class="img_overlay">
+							<div>
+								<h3>Landing page</h3>
+								<a href="#barberya" class=""><i class="fas fa-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="showcase_img_container">
+						<img src="./images/bugTrackerLaptopMokup.png" alt="" />
+						<div class="img_overlay">
+							<div>
+								<h3>Bug tracker</h3>
+								<a href="#bugtracker" class=""><i class="fas fa-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="showcase_img_container">
+						<img src="./images/moviesMockup.png" alt="" />
+						<div class="img_overlay">
+							<div>
+								<h3>Movies app</h3>
+								<a href="#movieApp" class=""><i class="fas fa-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="showcase_img_container">
+						<img src="./images/shoesGeniusLaptopMockup.png" alt="" />
+						<div class="img_overlay">
+							<div>
+								<h3>E-commerce platform</h3>
+								<a href="#e-commerce" class=""><i class="fas fa-plus"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- RESUME -->
+		<section id="resume" class="resume_section mb-5">
+			<div class="resume">
+				<section class="header_section">
+					<div>
+						<h1 class="name">DUMITRU MERLUSCA</h1>
+						<h3 class="job_position">WEB DEVELOPER</h3>
+					</div>
+				</section>
+
+				<section class="contact_section">
+					<div class="flex">
+						<i class="fas fa-mobile-alt"></i>
+						<span>+40754331725</span>
+					</div>
+					<div class="flex">
+						<i class="fas fa-envelope-open"></i>
+						<span>dumitrumerlusca@gmail.com</span>
+					</div>
+					<div class="flex">
+						<i class="far fa-flag"></i>
+						<span>Romania</span>
+					</div>
+				</section>
+
+				<section class="about_me mb-4">
+					<div class="text-center">
+						<h1 class="resume_section_title">ABOUT ME</h1>
+					</div>
+					<p>
+						Not long ago, I realized that there is nothing that I can not learn or become as long as I am willing to do what is necessary. It took me a while to choose this path, but after a closer look I couldn’t find anything that could suit me better. From that moment I began to discover the true world of web development and with each passing day I started to sink deeper and deeper into it. My concentration and determination helped me a lot and now I think I’m ready to step up. I’m looking for new challenges, a new environment in witch to grow, to learn and to sharpen my skills.
+					</p>
+					<p class="mt-1">Below you'll find projects I've completed that showcase my skills and general background in web development.</p>
+				</section>
+
+				<section class="educationAndSkills mb-4">
+					<div class="education flex-1">
+						<div class="text-center">
+							<h1 class="resume_section_title">education</h1>
+						</div>
+						<ul>
+							<li class="mb-3">
+								<h4 class="years">2015-2019</h4>
+								<h3>Colegiul Tehnic Dimitrie Ghika Comanești</h3>
+								<p class="font-thin h4 my-1">-profil mate-info</p>
+							</li>
+							<li class="mb-3">
+								<h4 class="years">2019-?</h4>
+								<h3>Universitatea Transilvania Brasov</h3>
+							</li>
+						</ul>
+					</div>
+					<div class="competencies flex-1">
+						<div class="text-center">
+							<h1 class="resume_section_title">competencies</h1>
+						</div>
+						<div class="mb-1">
+							<h3>Languages</h3>
+							<ul>
+								<li>English (Advanced)</li>
+								<li>Romanian (Advanced)</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Strengts</h3>
+							<ul>
+								<li>self motivation</li>
+								<li>teamwork</li>
+								<li>trustworthy</li>
+								<li>disciplined</li>
+								<li>resourceful</li>
+								<li>can google stuff i don't know</li>
+							</ul>
+						</div>
+					</div>
+					<div class="skills flex-1"">
+						<div class="text-center">
+							<h1 class="resume_section_title">skills</h1>
+						</div>
+						<ul>
+							<li>REACT</li>
+							<li>JAVASCRIPT</li>
+							<li>NODE</li>
+							<li>MONGO DB</li>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>BOOTSTRAP CSS</li>
+							<li>TAILWIND CSS</li>
+							<li>SASS</li>
+							<li>GIT</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="experience">
+					<div class="text-center">
+						<h1 class="resume_section_title">previous experience</h1>
+					</div>
+					<div class="resume_projects">
+						<div class="resume_project">
+							<h3>E-commerce platform</h3>
+							<div class="flex gap-2">
+								<a target="_blank" class="h5" href="https://shoes-genius.herokuapp.com/">Check live project</a>
+								<a target="_blank" class="h5" href="https://github.com/omerta-web-master/e-commerce-platform">Check Gitub repo</a>
+							</div>
+							<p>An e-commerce store. This application was built completely from scratch using React on frontend, Node Js on backend and Mongo DB database. Users can register, login, and go through the whole checkout process.</p>
+							<p>The payment system is implemented using the paypal api</p>
+						</div>
+
+						<div class="resume_project">
+							<h3>Issues tracker</h3>
+							<div class="flex gap-2">
+								<a target="_blank" class="h5" href="https://focused-minsky-858c37.netlify.app/dashboard">Check live project</a>
+								<a target="_blank" class="h5" href="https://github.com/omerta-web-master/Issue-tracker">Check Gitub repo</a>
+							</div>
+							<p>Full stack application, React, Node, Mongo DB. App for managing issues for ongoing company projects. Users can send tickets with the issue that will be later assign to developers to fix.</p>
+						</div>
+
+						<div class="resume_project">
+							<h3>Movie app</h3>
+							<div class="flex gap-2">
+								<a target="_blank" class="h5" href="https://nostalgic-benz-8583f9.netlify.app/">Check live project</a>
+								<a target="_blank" class="h5" href="https://github.com/omerta-web-master/Issue-tracker">Check Gitub repo</a>
+							</div>
+							<p>Utilizing the TMDB api, this app was designed in raw Javascript code (no libraries). It's a single page application, and the content it's rendered dynamically through javascript based on user actions.</p>
+							<p>Users can search for a specific movie, tv show, similar movies, popular movies, movie cast etc.</p>
+						</div>
+
+						<div class="resume_project">
+							<h3>Restaurant landing page</h3>
+							<div class="flex gap-2">
+								<a target="_blank" class="h5" href="https://competent-brattain-bbc39a.netlify.app/">Check live project</a>
+								<a target="_blank" class="h5" href="https://github.com/omerta-web-master/Pasolino-restaurant-landing-page">Check Gitub repo</a>
+							</div>
+							<p>Clean, modern, responsive landing page for a restaurant. Created using HTML5, CSS3, Sass and Javascript</p>
+						</div>
+
+						<div class="resume_project">
+							<h3>Barber shop landing page</h3>
+							<div class="flex gap-2">
+								<a target="_blank" class="h5" href="https://confident-roentgen-b0a7d5.netlify.app/">Check live project</a>
+								<a target="_blank" class="h5" href="https://github.com/omerta-web-master/Barberya-landing-page">Check Gitub repo</a>
+							</div>
+								<p>Responsive landing page for a barber shop. Created using HTML5, CSS3, Sass and Javascript. Has a clean and modern design.</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+
+		<!-- PROJECTS -->
+		<section class="project_section">
+			<div class="section_title">
+				<h1>Projects</h1>
+				<div class="line"></div>
+			</div>
+			<div id="projects" class="projects">
+				<!-- E-COMMERCE -->
+				<div id="e-commerce" class="project">
+					<div class="container">
+						<div class="flex">
+							<div class="project_photos">
+								<div class="current_img_container">
+									<img
+										class="current_img"
+										src="./images/shoesGenius1.png"
+										data-current-img="ecommerce"
+										alt=""
+									/>
+								</div>
+								<div class="all_photos">
+									<div data-project-img="ecommerce">
+										<img src="./images/shoesGenius1.png" alt="" />
+									</div>
+									<div data-project-img="ecommerce">
+										<img src="./images/shoesGenius2.png" alt="" />
+									</div>
+									<div data-project-img="ecommerce">
+										<img src="./images/shoesGenius3.png" alt="" />
+									</div>
+									<div data-project-img="ecommerce">
+										<img src="./images/shoesGenius4.png" alt="" />
+									</div>
+								</div>
+							</div>
+
+							<div class="project_info">
+								<h1 class="project_title">React E-commerce platform</h1>
+								<div class="languages">
+									<i class="fab fa-react"></i>
+									<i class="fab fa-node"></i>
+									<i class="fab fa-js"></i>
+									<i class="fab fa-css3-alt"></i>
+									<i class="fab fa-html5"></i>
+								</div>
+								<div class="py-2">
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://shoes-genius.herokuapp.com/"
+									>
+										Check live project
+									</a>
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://github.com/omerta-web-master/e-commerce-platform"
+									>
+										Check GitHub repo
+									</a>
+								</div>
+								<p>
+									Full stack MERN application created with React, Node, and
+									Mongo DB
+								</p>
+								<p class="py-1">
+									Users can got through the whole checkout process
+								</p>
+								<div class="mt-2">
+									<h3 class="text-center">Some features</h3>
+									<ul class="features_list">
+										<li>checkout process</li>
+										<li>paypal payment system</li>
+										<li>authentication</li>
+										<li>admin panel</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- BUG TRACKER -->
+				<div id="bugtracker" class="project">
+					<div class="container">
+						<div class="flex flex-row-reverse">
+							<div class="project_photos">
+								<div class="current_img_container">
+									<img
+										class="current_img"
+										src="./images/bugTracker1.png"
+										data-current-img="bugtracker"
+										alt=""
+									/>
+								</div>
+								<div class="all_photos">
+									<div data-project-img="bugtracker">
+										<img src="./images/bugTracker1.png" alt="" />
+									</div>
+									<div data-project-img="bugtracker">
+										<img src="./images/bugTracker2.png" alt="" />
+									</div>
+									<div data-project-img="bugtracker">
+										<img src="./images/bugTracker3.png" alt="" />
+									</div>
+									<div data-project-img="bugtracker">
+										<img src="./images/bugTracker4.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="project_info">
+								<h1 class="project_title">React Issues tracker</h1>
+								<div class="languages">
+									<i class="fab fa-react"></i>
+									<i class="fab fa-node"></i>
+									<i class="fab fa-js"></i>
+									<i class="fab fa-css3-alt"></i>
+									<i class="fab fa-html5"></i>
+								</div>
+								<div class="py-2">
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://focused-minsky-858c37.netlify.app/"
+									>
+										Check live project
+									</a>
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://github.com/omerta-web-master/Issue-tracker"
+									>
+										Check GitHub repo
+									</a>
+								</div>
+								<p>
+									Issues tracker created using React on frontent, Node and
+									Express on backend, and Mongo DB database.
+								</p>
+								<p class="py-1">
+									Users can create an account and be assigned to different
+									projects. They can send tickets, resolve tickets, leave
+									comments and more
+								</p>
+								<div class="mt-2">
+									<h3 class="text-center">Some features</h3>
+									<ul class="features_list">
+										<li>admin panel (users, projects, tickets management)</li>
+										<li>users have different roles</li>
+										<li>authentication</li>
+										<li>crud functionality</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MOVIE APP -->
+				<div id="movieApp" class="project">
+					<div class="container">
+						<div class="flex">
+							<div class="project_photos">
+								<div class="current_img_container">
+									<img
+										class="current_img"
+										src="./images/movie2.png"
+										data-current-img="movie"
+										alt=""
+									/>
+								</div>
+								<div class="all_photos">
+									<div data-project-img="movie">
+										<img src="./images/movie2.png" alt="" />
+									</div>
+									<div data-project-img="movie">
+										<img src="./images/movie1.png" alt="" />
+									</div>
+									<div data-project-img="movie">
+										<img src="./images/movies3.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="project_info">
+								<h1 class="project_title">Movie App</h1>
+								<div class="languages">
+									<i class="fab fa-js"></i>
+									<i class="fab fa-css3-alt"></i>
+									<i class="fab fa-sass"></i>
+									<i class="fab fa-html5"></i>
+								</div>
+								<div class="py-2">
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://nostalgic-benz-8583f9.netlify.app/"
+									>
+										Check live project
+									</a>
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://github.com/omerta-web-master/Issue-tracker"
+									>
+										Check GitHub repo
+									</a>
+								</div>
+								<p>Movie App created 100% with Vanilla Javascript</p>
+								<p class="py-1">Consumes the TMDB api</p>
+								<div class="mt-2">
+									<h3 class="text-center">Some features</h3>
+									<ul class="features_list">
+										<li>search movies, tv shows</li>
+										<li>pagination</li>
+										<li>
+											get extra details about movies / tv shows, actors,
+											seasons, trailer, budgets, release date etc..
+										</li>
+										<li>show similar movies / tv shows</li>
+										<li>search by genre, year etc</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- PASOLINO RESTAURANT -->
+				<div id="pasolino" class="project">
+					<div class="container">
+						<div class="flex flex-row-reverse">
+							<div class="project_photos">
+								<div class="current_img_container">
+									<img
+										class="current_img"
+										src="./images/pasolino1.png"
+										data-current-img="pasolino"
+										alt=""
+									/>
+								</div>
+								<div class="all_photos">
+									<div data-project-img="pasolino">
+										<img src="./images/pasolino1.png" alt="" />
+									</div>
+									<div data-project-img="pasolino">
+										<img src="./images/pasolino2.png" alt="" />
+									</div>
+									<div data-project-img="pasolino">
+										<img src="./images/pasolino3.png" alt="" />
+									</div>
+									<div data-project-img="pasolino">
+										<img src="./images/pasolino4.png" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="project_info">
+								<h1 class="project_title">Restaurant landing page</h1>
+								<div class="languages">
+									<i class="fab fa-js"></i>
+									<i class="fab fa-css3-alt"></i>
+									<i class="fab fa-sass"></i>
+									<i class="fab fa-html5"></i>
+								</div>
+								<div class="py-2">
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://competent-brattain-bbc39a.netlify.app/"
+									>
+										Check live project
+									</a>
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://github.com/omerta-web-master/Pasolino-restaurant-landing-page"
+									>
+										Check GitHub repo
+									</a>
+								</div>
+								<p>Created using HTML5, CSS3, Sass, Javascript</p>
+								<p class="py-1">
+									Clean, modern, responsive landing page for restaurant
+								</p>
+								<div class="mt-2">
+									<h3 class="text-center"></h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- BERBERYA -->
+				<div id="barberya" class="project">
+					<div class="container">
+						<div class="flex">
+							<div class="project_photos">
+								<div class="current_img_container">
+									<img
+										class="current_img"
+										src="./images/barberya1.jpg"
+										data-current-img="barberya"
+										alt=""
+									/>
+								</div>
+								<div class="all_photos">
+									<div data-project-img="barberya">
+										<img src="./images/barberya1.jpg" alt="" />
+									</div>
+									<div data-project-img="barberya">
+										<img src="./images/barberya2.jpg" alt="" />
+									</div>
+									<div data-project-img="barberya">
+										<img src="./images/barberya3.jpg" alt="" />
+									</div>
+									<div data-project-img="barberya">
+										<img src="./images/barberya4.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="project_info">
+								<h1 class="project_title">Barber shop landing page</h1>
+								<div class="languages">
+									<i class="fab fa-js"></i>
+									<i class="fab fa-css3-alt"></i>
+									<i class="fab fa-sass"></i>
+									<i class="fab fa-html5"></i>
+								</div>
+								<div class="py-2">
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://confident-roentgen-b0a7d5.netlify.app/"
+									>
+										Check live project
+									</a>
+									<a
+										class="project_link"
+										target="_blank"
+										href="https://github.com/omerta-web-master/Barberya-landing-page"
+									>
+										Check GitHub repo
+									</a>
+								</div>
+								<p>Created using HTML5, CSS3, Sass, Javascript</p>
+								<p class="py-1">
+									Clean, modern, responsive landing page for barber shop
+								</p>
+								<div class="mt-2">
+									<h3 class="text-center"></h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="social_media">
+				<a href="https://github.com/omerta-web-master"><i class="fab fa-github"></i></a>
+				<a href="https://www.facebook.com/dumitru.merlusca"><i class="fab fa-facebook"></i></a>
+				<a href="https://www.linkedin.com/in/dumitru-merlusca-2a06a7215/"><i class="fab fa-linkedin"></i></a>
+			</div>
+			<p>
+				&copy Copyright 2021
+			</p>
+		</footer>
+		<script type="module" src="script.js"></script>
+	</body>
+</html>

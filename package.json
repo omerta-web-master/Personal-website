@@ -1,0 +1,16 @@
+{
+	"dependencies": {
+		"sass": "^1.45.1"
+	},
+	"name": "portfolio",
+	"version": "1.0.0",
+	"main": "canvas.js",
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"sass": "sass --no-source-map --watch ./scss:css"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": ""
+}
