@@ -1,6 +1,6 @@
 import initCanvasAnimation from "./canvas.js";
 const GEOLOCATION_API_KEY = "c77fbeed277844f6984cac026a86b03f";
-const BASE_API_URL = "https://portfolio-api123.herokuapp.com/";
+const BASE_API_URL = "https://portfolio-api123.herokuapp.com";
 
 const canvas = document.querySelector("#canvas1");
 initCanvasAnimation(canvas);
